@@ -2,8 +2,10 @@ import getProtocol from "@/helpers/getProtocol";
 import getHost from "@/helpers/getHost";
 import * as windy from '@/helpers/windy'
 
-
-export default function BaseURL({url}) {
+interface Props {
+    url: string;
+}
+export default function BaseURL({url}: Props) {
     const dest = url ?? `https://2switches.com`
     return (
         <div>

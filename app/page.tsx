@@ -1,7 +1,11 @@
 import BaseURL from '@/components/BaseURL'
 import * as windy from '@/helpers/windy'
 
-export default function Home({searchParams}) {
+interface Props {
+    searchParams: Record<string, string>
+}
+
+export default function Home({searchParams}: Props) {
   return (
     <main className={windy.pageBody}>
         <div className={windy.blackBg}/>
