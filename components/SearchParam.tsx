@@ -1,13 +1,14 @@
 "use client"
 import {input} from '@/helpers/windy'
 import getSearchParams from "@/helpers/getSearchParams";
+import {ReactNode} from "react";
 
 interface Props {
     url: string;
 }
 export default function SearchParam({url}: Props) {
     const queryParams = getSearchParams(url)
-    const nodeArr = []
+    const nodeArr: ReactNode[] = []
     queryParams.forEach((value, key) => {
         nodeArr.push(<div
             key={key}
